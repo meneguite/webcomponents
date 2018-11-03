@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>crypto-price</title>
+    <style>
+      crypto-price {
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <noscript>
+        <strong>We're sorry but crypto-price doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      </noscript>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Bitcambio</h3>
+          <crypto-price theme="dark" provider="bitcambio" spread="0.01" origin="BTC" destiny="BRL" reference="last" interval="20000"></crypto-price>
+          <crypto-price theme="light" provider="bitcambio" spread="0.01" origin="BTC" destiny="BRL" reference="buy" interval="30000"></crypto-price>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Mercado Bitcoin</h3>
+          <crypto-price theme="dark" provider="mercado-bitcoin" spread="0.01" origin="BTC" destiny="BRL" reference="last" interval="20000"></crypto-price>
+          <crypto-price theme="light" provider="mercado-bitcoin" spread="0.01" origin="BTC" destiny="BRL" reference="buy" interval="30000"></crypto-price>
+        </div>
+      </div>
+
+      <br /><br />
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Bitcointrade</h3>
+          <crypto-price theme="dark" provider="bitcointrade" spread="0.01" origin="BTC" destiny="BRL" reference="last" interval="20000"></crypto-price>
+          <crypto-price theme="light" provider="bitcointrade" spread="0.01"  origin="BTC" destiny="BRL" reference="buy" interval="30000"></crypto-price>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
